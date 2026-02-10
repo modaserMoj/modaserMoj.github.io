@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modaser Mojadiddi | Software Engineer & AI Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">M<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-image-wrapper reveal">
+                <div class="hero-image-ring"></div>
+                <img src="1758515859639.jpg" alt="Modaser Mojadiddi" class="hero-image">
+            </div>
+            <div class="hero-text">
+                <p class="hero-greeting reveal">Hi, I'm</p>
+                <h1 class="hero-name reveal">Modaser <span class="accent">Mojadiddi</span></h1>
+                <div class="hero-typewriter reveal">
+                    <span class="typewriter-prefix">I build </span>
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-subtitle reveal">Computer Science & Mathematics @ University of Toronto<br>Contract AI Engineer @ Ontario Teachers' Pension Plan</p>
+                <div class="hero-cta reveal">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="resume.pdf" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-file-alt"></i> Resume
+                    </a>
+                </div>
+                <div class="hero-socials reveal">
+                    <a href="https://github.com/modaserMoj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/modaser" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:modaser.farooqi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a senior at the <strong>University of Toronto</strong> pursuing a double major in 
+                        <strong>Computer Science</strong> and <strong>Mathematics</strong> with a focus on AI applications. 
+                        Currently working as a Contract AI Engineer at <strong>Ontario Teachers' Pension Plan</strong>, 
+                        where I co-developed an AI chat platform adopted by 400+ employees.
+                    </p>
+                    <p>
+                        I'm passionate about building intelligent systems that solve real-world problems — from 
+                        tax document extraction tools that eliminate manual work, to controversy monitoring services 
+                        that leverage LLMs and web search APIs. I thrive at the intersection of <strong>software engineering</strong> 
+                        and <strong>machine learning</strong>.
+                    </p>
+                    <p>
+                        Dean's List Scholar with a 3.77 GPA, I bring a strong foundation in algorithms, 
+                        data structures, neural networks, and reinforcement learning to every project I tackle.
+                    </p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3.77">0</div>
+                        <div class="stat-label">GPA / 4.0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="400" data-suffix="+">0</div>
+                        <div class="stat-label">Users on AI Platform</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Internships</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title reveal">Work <span class="accent">Experience</span></h2>
+            <div class="timeline">
+                <!-- OTPP -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Intern Software Engineer</h3>
+                                <h4>Ontario Teachers' Pension Plan</h4>
+                            </div>
+                            <span class="timeline-date">May 2024 — Aug 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Co-developed the in-house AI chat app using <strong>Python, React, & Azure</strong> featuring a chatbot, RAG, MCP, LangChain agents, extraction, and automation tools — adopted by <strong>400+ employees</strong> with <strong>80+ daily users</strong></li>
+                            <li>Built a tax document extraction tool using Python & a self-trained Document Intelligence model, <strong>reducing manual extraction time by 100%</strong></li>
+                            <li>Created a controversy monitoring service leveraging <strong>OpenAI & Web Search APIs</strong> with Snowflake storage and human-in-the-loop validation, <strong>reducing manual workload by 85%</strong></li>
+                            <li>Developed a Python & React AKS app with OAuth2.0 for portfolio managers, <strong>cutting manual tracking errors by 90%</strong></li>
+                            <li>Maintained <strong>10+ .NET applications</strong> for critical business services ensuring near-zero downtime</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>React</span><span>Azure</span><span>LangChain</span><span>OpenAI</span><span>.NET</span><span>Snowflake</span><span>AKS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bell -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Intern Software Engineer</h3>
+                                <h4>Bell Canada</h4>
+                            </div>
+                            <span class="timeline-date">May 2023 — Aug 2023</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed and maintained official websites of Bell Media owned TV networks using <strong>JavaScript, Vue, CSS, AEM</strong></li>
+                            <li>Refactored and optimized codebases for multiple network web apps, <strong>reducing load times by 0.5 seconds</strong></li>
+                            <li>Integrated <strong>mParticle</strong> for analytical data tracking, enhancing user experience insights</li>
+                            <li>Implemented automated regression testing with <strong>Selenium, Cucumber & BDD</strong>, <strong>decreasing testing time by 75%</strong></li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>JavaScript</span><span>Vue</span><span>CSS</span><span>AEM</span><span>Selenium</span><span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UofT Hatchery -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer Intern</h3>
+                                <h4>UofT Hatchery — University Health Network</h4>
+                            </div>
+                            <span class="timeline-date">Sep 2022 — Apr 2023</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed web pages using <strong>JavaScript, PHP, SQL</strong> to display studies, research and news</li>
+                            <li>Built an automated timesheet submission application, <strong>eliminating manual intervention</strong></li>
+                            <li>Produced extensive documentation to guide developers through newly implemented features</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>JavaScript</span><span>PHP</span><span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TA -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Teaching Assistant</h3>
+                                <h4>University of Toronto</h4>
+                            </div>
+                            <span class="timeline-date">Sep 2023 — Dec 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Created tutorial content and taught sections of <strong>35+ students</strong> in CS and Math courses</li>
+                            <li>Coordinated and graded assignments for <strong>1,000+ students</strong></li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Teaching</span><span>Computer Science</span><span>Mathematics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fas fa-brain project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/modaserMoj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>Recommendation Engine</h3>
+                    <p class="project-subtitle">Academic Paper Recommendation POC for Knowlecy</p>
+                    <p>Developed a user-activity processor with <strong>FastAPI</strong> to track interactions and store vector embeddings in <strong>Qdrant</strong>. Designed an embedding-based recommendation algorithm with <strong>Neo4j</strong> integration. Deployed microservices to <strong>AKS</strong> using GitHub Actions CI/CD.</p>
+                    <div class="project-tags">
+                        <span>FastAPI</span><span>Qdrant</span><span>Neo4j</span><span>AKS</span><span>Python</span><span>CI/CD</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fas fa-database project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/modaserMoj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>OpenFeedbackVault</h3>
+                    <p class="project-subtitle">A Collection of Human AI Feedback Datasets</p>
+                    <p>Co-developed an end-to-end website for human AI feedback datasets. Backend built with <strong>Node.js & REST API</strong>, metadata stored in <strong>PostgreSQL</strong>. Deployed using Docker on Apache2. Created a chatbot using <strong>Llama</strong> integrated with <strong>RAG</strong> leveraging dataset metadata.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Llama</span><span>RAG</span><span>REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Technical <span class="accent">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Vue</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Spring</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Developer Tools & Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes (AKS)</span>
+                        <span class="skill-tag">Helm</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI & ML</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">MCP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Vector Databases</span>
+                        <span class="skill-tag">MLflow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title reveal">Education</span></h2>
+            <div class="education-card reveal">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3>University of Toronto</h3>
+                        <p class="education-degree">Honours Bachelor of Science</p>
+                        <p class="education-major">Computer Science & Mathematical Sciences — Double Major</p>
+                    </div>
+                    <div class="education-meta">
+                        <span class="education-date">Expected April 2026</span>
+                        <span class="education-gpa">GPA: 3.77 / 4.0</span>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <span class="education-badge"><i class="fas fa-award"></i> Dean's List Scholar 2021–2024</span>
+                    <div class="education-courses">
+                        <h4>Relevant Coursework</h4>
+                        <div class="course-tags">
+                            <span>Software Engineering</span>
+                            <span>System Programming</span>
+                            <span>Data Structures & Analysis</span>
+                            <span>Algorithm Design & Analysis</span>
+                            <span>Information & Computer Security</span>
+                            <span>Databases</span>
+                            <span>Machine Learning</span>
+                            <span>Reinforcement Learning</span>
+                            <span>Neural Networks & Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get in <span class="accent">Touch</span></h2>
+            <div class="contact-content reveal">
+                <p class="contact-text">
+                    I'm always open to new opportunities, collaborations, and conversations. 
+                    Whether you have a project in mind or just want to say hi — feel free to reach out!
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:modaser.farooqi@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>modaser.farooqi@gmail.com</p>
+                    </a>
+                    <a href="https://linkedin.com/in/modaser" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin-in"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me</p>
+                    </a>
+                    <a href="https://github.com/modaserMoj" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>modaserMoj</p>
+                    </a>
+                </div>
+                <a href="mailto:modaser.farooqi@gmail.com" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane"></i> Say Hello
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by <span class="accent">Modaser Mojadiddi</span></p>
+            <p class="footer-sub">&copy; 2026 — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
